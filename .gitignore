@@ -1,3 +1,11 @@
+# Angular files
+dist/
+tmp/
+app/**/*.js
+app/**/*.js.map
+node_modules/
+bower_components/
+
 # PHP Storm files
 .idea
 
@@ -5,4 +13,4 @@
 .DS_Store
 
 # Google Analytics files
-google[a-z0-9]+.html
+google*.html
