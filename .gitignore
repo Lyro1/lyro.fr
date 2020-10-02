@@ -1,0 +1,8 @@
+# PHP Storm files
+.idea
+
+# MacOS files
+.DS_Store
+
+# Google Analytics files
+google[a-z0-9]+.html
