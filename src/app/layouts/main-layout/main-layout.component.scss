@@ -1,0 +1,28 @@
+
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  #macbook {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .screen {
+      position: absolute;
+      left: 10.75%;
+      top: 3%;
+      width: 78.5%;
+      height: 85.5%;
+      background-color: black;
+    }
+  }
+}
