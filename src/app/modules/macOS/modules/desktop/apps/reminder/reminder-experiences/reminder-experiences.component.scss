@@ -1,9 +1,9 @@
-.reminder-about-me {
+.reminder-experiences {
   margin: 2vw;
 
   h1 {
     font-size: 2vw;
-    color: #3a82f6;
+    color: #eb5545;
     margin-bottom: 0.5vw;
   }
 
@@ -14,30 +14,10 @@
     margin: 0.5vw 0;
   }
 
-  img {
-    float: left;
-    width: 0.7vw;
-    margin-right: 0.5vw;
-  }
-
-  .memoji {
-    width: 8vw;
-    float: left;
-    margin-right: 0;
-  }
-
   p {
     font-size: 0.7vw;
     margin: 0.3vw 0;
   }
-
-  .citation {
-    color: #666;
-    font-weight: bold;
-    font-size: 1.2vw;
-    font-style: italic;
-  }
-
 
   .reminder-item {
     display: flex;
@@ -52,15 +32,30 @@
       margin-right: 0.6vw;
     }
 
+    .info {
+      width: calc(100% - 1.3vw);
+    }
+
     img {
       float: left;
       width: 0.7vw;
       margin-right: 0.5vw;
     }
 
+    .company-logo {
+      float: none;
+      width: auto;
+      max-width: 80%;
+      max-height: 5vw;
+    }
+
     p {
       width: calc(100% - 1.3vw);
       margin-top: 0.05vw;
     }
+  }
+
+  .experience {
+    margin-bottom: 2vw;
   }
 }

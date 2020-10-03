@@ -8,14 +8,14 @@
   </div>
 
   <div class="left">
-    <div class="section" [ngClass]="{'section-selected': aboutMe}">
+    <div class="section" [ngClass]="{'section-selected': aboutMe}" (click)="openAboutMe()">
       <div class="icon" style="background-color: #3a82f6;">
         <img src="assets/about-me.png"/>
       </div>
       <p>About me</p>
     </div>
 
-    <div class="section" [ngClass]="{'section-selected': experiences}">
+    <div class="section" [ngClass]="{'section-selected': experiences}" (click)="openExperiences()">
       <div class="icon" style="background-color: #eb5545;">
         <img src="assets/experiences.png"/>
       </div>
@@ -23,15 +23,15 @@
       <p class="amount">3</p>
     </div>
 
-    <div class="section" [ngClass]="{'section-selected': scholarship}">
+    <div class="section" [ngClass]="{'section-selected': scholarship}" (click)="openScolarship()">
       <div class="icon" style="background-color: #f1a13c;">
         <img src="assets/scholarship.png"/>
       </div>
-      <p>Scolarship</p>
+      <p>Scholarship</p>
       <p class="amount">2</p>
     </div>
 
-    <div class="section" [ngClass]="{'section-selected': projects}">
+    <div class="section" [ngClass]="{'section-selected': projects}" (click)="openProjects()">
       <div class="icon" style="background-color: #5b6269;">
         <img src="assets/projects.png"/>
       </div>
@@ -43,6 +43,8 @@
 
   <div class="right">
     <app-reminder-about-me *ngIf="aboutMe"></app-reminder-about-me>
+    <app-reminder-experiences *ngIf="experiences"></app-reminder-experiences>
+    <app-reminder-scolarship *ngIf="scholarship"></app-reminder-scolarship>
   </div>
 
 </div>

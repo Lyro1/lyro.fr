@@ -19,6 +19,34 @@ export class ReminderPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public openAboutMe() {
+    this.aboutMe = true;
+    this.experiences = false;
+    this.scholarship = false;
+    this.projects = false;
+  }
+
+  public openExperiences() {
+    this.aboutMe = false;
+    this.experiences = true;
+    this.scholarship = false;
+    this.projects = false;
+  }
+
+  public openScolarship() {
+    this.aboutMe = false;
+    this.experiences = false;
+    this.scholarship = true;
+    this.projects = false;
+  }
+
+  public openProjects() {
+    this.aboutMe = false;
+    this.experiences = false;
+    this.scholarship = false;
+    this.projects = true;
+  }
+
   public closeWindow() {
     this.closed.emit();
   }
