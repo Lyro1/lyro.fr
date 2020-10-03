@@ -1,0 +1,85 @@
+
+.reminder {
+  position: absolute;
+  width: 40vw;
+  height: 30vw;
+  top: 3vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255,255,255,0.32);
+
+  .left {
+    width: 40%;
+
+    .section {
+      width: 80%;
+      margin: 1vw auto;
+      padding: 0.5vw 0;
+      border-radius: 8px;
+      background-color: rgba(90, 90, 90, 0.2);
+      display: flex;
+      transition: 0.2s;
+
+      .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 1.2vw;
+        height: 1.2vw;
+        border-radius: 50%;
+        margin-left: 0.8vw;
+
+        img {
+          display: block;
+          max-width:70%;
+          max-height: 70%;
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        font-size: 0.7vw;
+        margin-left: 1vw;
+        margin-top: 0.2vw;
+      }
+
+      .amount {
+        margin-left: auto;
+        font-weight: bold;
+        margin-right: 0.8vw;
+      }
+    }
+
+    .section-selected {
+      background-color: rgba(90, 90, 90, 0.4);
+      transition: 0.2s;
+    }
+  }
+
+  .right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    overflow-y: scroll;
+
+    .reminder-item {
+      display: flex;
+      margin: 0.2vw;
+
+      .checkbox {
+        width: 1vw;
+        height: 1vw;
+        background-color: white;
+        border: 0.05vw solid #808080;
+        margin-right: 0.6vw;
+      }
+    }
+  }
+}

@@ -6,7 +6,8 @@ import {LoginComponent} from "./modules/macOS/modules/login/login.component";
 
 const routes: Routes = [
   {path: '', component: StartupComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'desktop', loadChildren: () => import('./modules/macOS/modules/desktop/desktop-routing.module').then(m => m.DesktopRoutingModule)}
 ];
 
 @NgModule({

@@ -1,0 +1,48 @@
+<div class="window reminder">
+  <div class="window-header">
+    <div class="window-header-buttons">
+      <div class="window-header-button close" (click)="closeWindow()"></div>
+      <div class="window-header-button reduce"></div>
+      <div class="window-header-button disable"></div>
+    </div>
+  </div>
+
+  <div class="left">
+    <div class="section" [ngClass]="{'section-selected': aboutMe}">
+      <div class="icon" style="background-color: #3a82f6;">
+        <img src="assets/about-me.png"/>
+      </div>
+      <p>About me</p>
+    </div>
+
+    <div class="section" [ngClass]="{'section-selected': experiences}">
+      <div class="icon" style="background-color: #eb5545;">
+        <img src="assets/experiences.png"/>
+      </div>
+      <p>Experiences</p>
+      <p class="amount">3</p>
+    </div>
+
+    <div class="section" [ngClass]="{'section-selected': scholarship}">
+      <div class="icon" style="background-color: #f1a13c;">
+        <img src="assets/scholarship.png"/>
+      </div>
+      <p>Scolarship</p>
+      <p class="amount">2</p>
+    </div>
+
+    <div class="section" [ngClass]="{'section-selected': projects}">
+      <div class="icon" style="background-color: #5b6269;">
+        <img src="assets/projects.png"/>
+      </div>
+      <p>Projects</p>
+      <p class="amount">4</p>
+    </div>
+
+  </div>
+
+  <div class="right">
+    <app-reminder-about-me *ngIf="aboutMe"></app-reminder-about-me>
+  </div>
+
+</div>

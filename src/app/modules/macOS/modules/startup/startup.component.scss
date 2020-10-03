@@ -5,10 +5,12 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  background-color: black;
 
-  img {
+  .apple-logo {
     display: block;
     width: 9%;
     margin: 4.5% auto 0;
+    transition: 1s;
   }
 }

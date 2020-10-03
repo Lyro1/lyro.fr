@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+declare var $: any;
 
 @Component({
   selector: 'app-startup',
@@ -13,7 +14,10 @@ export class StartupComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() =>
       {
-        this.router.navigate(['/login']);
+        $('.apple-logo').css('opacity', 0);
+        setTimeout(() => {
+          this.router.navigate(['/login']);
+        }, 1000);
       },
       5000);
   }

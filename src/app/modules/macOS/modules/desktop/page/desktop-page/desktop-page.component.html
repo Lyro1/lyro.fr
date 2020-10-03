@@ -1,0 +1,30 @@
+
+<div class="topbar">
+  <div class="left">
+    <img class="apple-logo" src="assets/apple-logo-white.png" (click)="openApple = true"/>
+    <b>Lyro</b>
+  </div>
+  <div class="right">
+    <p class="date">{{currentDate}}</p>
+  </div>
+</div>
+
+<div class="menu-window" *ngIf="openApple">
+  <p (click)="aboutTheMac = true; openApple = false;">About the Mac</p>
+  <div class="separator"></div>
+  <p [routerLink]="['/login']">Logout...</p>
+  <p [routerLink]="['/']">Restart...</p>
+</div>
+
+<app-about-the-mac *ngIf="aboutTheMac" (closed)="onAboutTheMacClosed()"></app-about-the-mac>
+<app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
+
+<div class="dock">
+  <img class="dock-icon" src="assets/launchpad.png">
+  <img class="dock-icon" src="assets/contacts.png">
+  <img class="dock-icon" src="assets/calendar.png">
+  <img class="dock-icon" src="assets/reminders.png" (click)="reminder = true;">
+  <img class="dock-icon" src="assets/safari.png">
+  <img class="dock-icon" src="assets/music.png">
+  <img class="dock-icon" src="assets/terminal.png">
+</div>
