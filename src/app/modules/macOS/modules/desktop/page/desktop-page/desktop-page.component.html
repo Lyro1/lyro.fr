@@ -16,6 +16,12 @@
   <p [routerLink]="['/']">Restart...</p>
 </div>
 
+<app-launchpad *ngIf="launchpad" (closed)="onLaunchpadClose()"
+                                 (openContacts)="onLaunchpadClose(); openContacts()"
+                                 (openReminder)="onLaunchpadClose(); openReminder()"
+                                 (openSafari)="onLaunchpadClose(); openSafari()"
+                                 (openTerminal)="onLaunchpadClose(); openTerminal()"
+></app-launchpad>
 <app-about-the-mac *ngIf="aboutTheMac" (closed)="onAboutTheMacClosed()"></app-about-the-mac>
 <app-contacts *ngIf="contacts" (closed)="onContactsClosed()"></app-contacts>
 <app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
@@ -24,30 +30,22 @@
 
 <div class="dock">
   <div class="dock-icon">
-    <img src="assets/launchpad.png">
+    <img src="assets/launchpad.png" (click)="switchLaunchpad()">
   </div>
   <div class="dock-icon">
-    <img class="contacts-icon" src="assets/contacts.png" (click)="openContacts()">
+    <img class="contacts-icon" src="assets/contacts.png" (click)="onLaunchpadClose(); openContacts()">
     <div class="dock-icon-indicator app-open-contacts" [ngClass]="{'dock-icon-indicator-open': readyContacts}"></div>
   </div>
-  <div class="dock-icon">
-    <img src="assets/calendar.png">
-    <div class="dock-icon-indicator app-open-calendar" [ngClass]="{'dock-icon-indicator-open': readyCalendar}"></div>
-  </div>
   <div class="dock-icon reminder">
-    <img class="reminder-icon" src="assets/reminders.png" (click)="openReminder()">
+    <img class="reminder-icon" src="assets/reminders.png" (click)="onLaunchpadClose(); openReminder()">
     <div class="dock-icon-indicator app-open-reminder" [ngClass]="{'dock-icon-indicator-open': readyReminder}"></div>
   </div>
   <div class="dock-icon">
-    <img class="safari-icon" src="assets/safari.png" (click)="openSafari()">
+    <img class="safari-icon" src="assets/safari.png" (click)="onLaunchpadClose(); openSafari()">
     <div class="dock-icon-indicator app-open-safari" [ngClass]="{'dock-icon-indicator-open': readySafari}"></div>
   </div>
   <div class="dock-icon">
-    <img src="assets/music.png">
-    <div class="dock-icon-indicator app-open-music" [ngClass]="{'dock-icon-indicator-open': readyMusic}"></div>
-  </div>
-  <div class="dock-icon">
-    <img class="terminal-icon" src="assets/terminal.png" (click)="openTerminal()">
+    <img class="terminal-icon" src="assets/terminal.png" (click)="onLaunchpadClose(); openTerminal()">
     <div class="dock-icon-indicator app-open-terminal" [ngClass]="{'dock-icon-indicator-open': readyTerminal}"></div>
   </div>
 </div>

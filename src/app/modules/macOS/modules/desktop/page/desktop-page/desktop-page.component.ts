@@ -14,18 +14,16 @@ export class DesktopPageComponent implements OnInit {
   public openApple = false;
   public aboutTheMac = false;
 
+  public launchpad = false;
+
   public readyReminder = false;
   public reminder = false;
 
   public readyContacts = false;
   public contacts = false;
 
-  public readyCalendar = false;
-
   public readySafari = false;
   public safari = false;
-
-  public readyMusic = false;
 
   public readyTerminal = false;
   public terminal = false;
@@ -52,6 +50,18 @@ export class DesktopPageComponent implements OnInit {
         }, 500);
       }, 500);
     }, 500);
+  }
+
+  public switchLaunchpad() {
+    if (this.launchpad) {
+      this.onLaunchpadClose();
+    } else {
+      this.openLaunchpad();
+    }
+  }
+
+  public openLaunchpad() {
+    this.launchpad = true;
   }
 
   public openContacts() {
@@ -84,6 +94,13 @@ export class DesktopPageComponent implements OnInit {
     setTimeout(() => {
       this.terminal = true;
     }, 2000);
+  }
+
+  public onLaunchpadClose() {
+    $('.launchpad').css('opacity', '0');
+    setTimeout(() => {
+      this.launchpad = false;
+    }, 500);
   }
 
   public onAboutTheMacClosed() {
