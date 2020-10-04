@@ -11,7 +11,7 @@ declare var $: any;
 export class DesktopPageComponent implements OnInit {
 
   public currentDate: string;
-  public openApple = false;
+  public apple = false;
   public aboutTheMac = false;
 
   public launchpad = false;
@@ -57,11 +57,20 @@ export class DesktopPageComponent implements OnInit {
       this.onLaunchpadClose();
     } else {
       this.openLaunchpad();
+      this.onCloseApple();
     }
   }
 
   public openLaunchpad() {
     this.launchpad = true;
+  }
+
+  public openApple() {
+    this.apple = true;
+  }
+
+  public openAboutTheMac() {
+    this.aboutTheMac = true;
   }
 
   public openContacts() {
@@ -94,6 +103,10 @@ export class DesktopPageComponent implements OnInit {
     setTimeout(() => {
       this.terminal = true;
     }, 2000);
+  }
+
+  public onCloseApple() {
+    this.apple = false;
   }
 
   public onLaunchpadClose() {

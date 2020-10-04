@@ -12,14 +12,12 @@ export class StartupComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    setTimeout(() =>
-      {
+    setTimeout(() => {
         $('.apple-logo').css('opacity', 0);
         setTimeout(() => {
           this.router.navigate(['/login']);
         }, 1000);
-      },
-      5000);
+      }, 5000);
   }
 
 }

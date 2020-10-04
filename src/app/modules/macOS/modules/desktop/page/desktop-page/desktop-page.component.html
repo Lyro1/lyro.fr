@@ -1,7 +1,7 @@
 
 <div class="topbar">
   <div class="left">
-    <img class="apple-logo" src="assets/apple-logo-white.png" (click)="openApple = true"/>
+    <img class="apple-logo" src="assets/apple-logo-white.png" (click)="openApple()"/>
     <b>Lyro</b>
   </div>
   <div class="right">
@@ -9,8 +9,8 @@
   </div>
 </div>
 
-<div class="menu-window" *ngIf="openApple">
-  <p (click)="aboutTheMac = true; openApple = false;">About the Mac</p>
+<div class="menu-window" *ngIf="apple">
+  <p (click)="onCloseApple(); openAboutTheMac();">About the Mac</p>
   <div class="separator"></div>
   <p [routerLink]="['/login']">Logout...</p>
   <p [routerLink]="['/']">Restart...</p>

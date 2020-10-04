@@ -1,5 +1,4 @@
-
-.container {
+.mobile-container {
   display: flex;
   width: 80%;
   max-width: 1200px;
@@ -8,24 +7,61 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  z-index: 10;
 
-  #macbook {
-    position: relative;
+  img {
+    width: 50%;
+    max-width: 342px;
+    margin: 0 auto;
+  }
 
-    img {
-      width: 100%;
-    }
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+}
 
-    .screen {
-      position: absolute;
-      left: 10.75%;
-      top: 3%;
-      width: 78.5%;
-      height: 85.5%;
-      background-image: url("../../../assets/wallpaper.jpg");
-      background-size: cover;
-      transition: 0.5s;
-      overflow: hidden;
+.container {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .mobile-container {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    #macbook {
+      opacity: 0;
+      width: 20%;
+      margin: 0 auto;
+      position: relative;
+      transition: 5s;
+
+      img {
+        width: 100%;
+      }
+
+      .screen {
+        position: absolute;
+        left: 10.75%;
+        top: 3%;
+        width: 78.5%;
+        height: 85.5%;
+        background-image: url("../../../assets/wallpaper.jpg");
+        background-size: cover;
+        transition: 0.5s;
+        overflow: hidden;
+      }
     }
   }
 }
