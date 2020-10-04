@@ -18,13 +18,34 @@
 
 <app-about-the-mac *ngIf="aboutTheMac" (closed)="onAboutTheMacClosed()"></app-about-the-mac>
 <app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
+<app-safari *ngIf="safari" (closed)="onSafariClosed()"></app-safari>
 
 <div class="dock">
-  <img class="dock-icon" src="assets/launchpad.png">
-  <img class="dock-icon" src="assets/contacts.png">
-  <img class="dock-icon" src="assets/calendar.png">
-  <img class="dock-icon" src="assets/reminders.png" (click)="reminder = true;">
-  <img class="dock-icon" src="assets/safari.png">
-  <img class="dock-icon" src="assets/music.png">
-  <img class="dock-icon" src="assets/terminal.png">
+  <div class="dock-icon">
+    <img src="assets/launchpad.png">
+  </div>
+  <div class="dock-icon">
+    <img src="assets/contacts.png">
+    <div class="dock-icon-indicator app-open-contacts" [ngClass]="{'dock-icon-indicator-open': readyContacts}"></div>
+  </div>
+  <div class="dock-icon">
+    <img src="assets/calendar.png">
+    <div class="dock-icon-indicator app-open-calendar" [ngClass]="{'dock-icon-indicator-open': readyCalendar}"></div>
+  </div>
+  <div class="dock-icon reminder">
+    <img class="reminder-icon" src="assets/reminders.png" (click)="openReminder()">
+    <div class="dock-icon-indicator app-open-reminder" [ngClass]="{'dock-icon-indicator-open': readyReminder}"></div>
+  </div>
+  <div class="dock-icon">
+    <img class="safari-icon" src="assets/safari.png" (click)="openSafari()">
+    <div class="dock-icon-indicator app-open-safari" [ngClass]="{'dock-icon-indicator-open': readySafari}"></div>
+  </div>
+  <div class="dock-icon">
+    <img src="assets/music.png">
+    <div class="dock-icon-indicator app-open-music" [ngClass]="{'dock-icon-indicator-open': readyMusic}"></div>
+  </div>
+  <div class="dock-icon">
+    <img src="assets/terminal.png">
+    <div class="dock-icon-indicator app-open-terminal" [ngClass]="{'dock-icon-indicator-open': readyTerminal}"></div>
+  </div>
 </div>
