@@ -10,10 +10,12 @@
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(255,255,255,0.82);
+  color: white;
 
   .window-header {
 
     p {
+      color: black;
       width: calc(100% - 5vw);
       text-align: center;
       line-height: 1.8vw;
