@@ -27,6 +27,7 @@ export class DesktopPageComponent implements OnInit {
   public readyMusic = false;
 
   public readyTerminal = false;
+  public terminal = false;
 
   constructor(private datepipe: DatePipe) {
     this.currentDate = this.datepipe.transform(new Date(), 'EEE LLL dd   h:mm aaa');
@@ -68,6 +69,14 @@ export class DesktopPageComponent implements OnInit {
     }, 2000);
   }
 
+  public openTerminal() {
+    this.readyTerminal = true;
+    this.openAppAnimation('.terminal-icon');
+    setTimeout(() => {
+      this.terminal = true;
+    }, 2000);
+  }
+
   public onAboutTheMacClosed() {
     this.aboutTheMac = false;
   }
@@ -80,6 +89,11 @@ export class DesktopPageComponent implements OnInit {
   public onSafariClosed() {
     this.readySafari = false;
     this.safari = false;
+  }
+
+  public onTerminalClosed() {
+    this.readyTerminal = false;
+    this.terminal = false;
   }
 
 }

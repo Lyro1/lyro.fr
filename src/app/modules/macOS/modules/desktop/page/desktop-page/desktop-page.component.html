@@ -19,6 +19,7 @@
 <app-about-the-mac *ngIf="aboutTheMac" (closed)="onAboutTheMacClosed()"></app-about-the-mac>
 <app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
 <app-safari *ngIf="safari" (closed)="onSafariClosed()"></app-safari>
+<app-terminal *ngIf="terminal" (closed)="onTerminalClosed()"></app-terminal>
 
 <div class="dock">
   <div class="dock-icon">
@@ -45,7 +46,7 @@
     <div class="dock-icon-indicator app-open-music" [ngClass]="{'dock-icon-indicator-open': readyMusic}"></div>
   </div>
   <div class="dock-icon">
-    <img src="assets/terminal.png">
+    <img class="terminal-icon" src="assets/terminal.png" (click)="openTerminal()">
     <div class="dock-icon-indicator app-open-terminal" [ngClass]="{'dock-icon-indicator-open': readyTerminal}"></div>
   </div>
 </div>
