@@ -18,6 +18,7 @@ export class DesktopPageComponent implements OnInit {
   public reminder = false;
 
   public readyContacts = false;
+  public contacts = false;
 
   public readyCalendar = false;
 
@@ -53,6 +54,14 @@ export class DesktopPageComponent implements OnInit {
     }, 500);
   }
 
+  public openContacts() {
+    this.readyContacts = true;
+    this.openAppAnimation('.contacts-icon');
+    setTimeout(() => {
+      this.contacts = true;
+    }, 2000);
+  }
+
   public openReminder() {
     this.readyReminder = true;
     this.openAppAnimation('.reminder-icon');
@@ -79,6 +88,11 @@ export class DesktopPageComponent implements OnInit {
 
   public onAboutTheMacClosed() {
     this.aboutTheMac = false;
+  }
+
+  public onContactsClosed() {
+    this.readyContacts = false;
+    this.contacts = false;
   }
 
   public onReminderClosed() {

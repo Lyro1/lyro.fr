@@ -6,11 +6,12 @@ import {RouterModule} from "@angular/router";
 import {ReminderModule} from "./apps/reminder/reminder.module";
 import { SafariComponent } from './apps/safari/safari.component';
 import { TerminalComponent } from './apps/terminal/terminal.component';
+import { ContactsComponent } from './apps/contacts/contacts.component';
 
 
 
 @NgModule({
-  declarations: [DesktopPageComponent, AboutTheMacComponent, SafariComponent, TerminalComponent],
+  declarations: [DesktopPageComponent, AboutTheMacComponent, SafariComponent, TerminalComponent, ContactsComponent],
   imports: [
     CommonModule,
     RouterModule,

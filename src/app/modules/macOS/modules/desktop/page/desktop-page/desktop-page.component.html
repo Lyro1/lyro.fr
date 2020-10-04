@@ -17,6 +17,7 @@
 </div>
 
 <app-about-the-mac *ngIf="aboutTheMac" (closed)="onAboutTheMacClosed()"></app-about-the-mac>
+<app-contacts *ngIf="contacts" (closed)="onContactsClosed()"></app-contacts>
 <app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
 <app-safari *ngIf="safari" (closed)="onSafariClosed()"></app-safari>
 <app-terminal *ngIf="terminal" (closed)="onTerminalClosed()"></app-terminal>
@@ -26,7 +27,7 @@
     <img src="assets/launchpad.png">
   </div>
   <div class="dock-icon">
-    <img src="assets/contacts.png">
+    <img class="contacts-icon" src="assets/contacts.png" (click)="openContacts()">
     <div class="dock-icon-indicator app-open-contacts" [ngClass]="{'dock-icon-indicator-open': readyContacts}"></div>
   </div>
   <div class="dock-icon">
