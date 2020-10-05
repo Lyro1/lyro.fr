@@ -1,0 +1,23 @@
+<div class="mobile-container">
+  <img src="assets/sad-me.png"/>
+  <h1>This is a desktop experience. Please use a larger display to enjoy it.</h1>
+</div>
+
+<div class="preloader" *ngIf="!allImagesLoaded">
+  <h1>Get ready for the experience...</h1>
+  <img src="assets/computer.png"/>
+  <img src="assets/loader.gif"/>
+</div>
+
+<img hidden *ngFor="let img of images;" [src]="img" (load)="loaded()" />
+
+<div class="container" *ngIf="allImagesLoaded">
+
+  <div id="macbook">
+    <img src="assets/macbook-pro.jpg"/>
+    <div class="screen">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>

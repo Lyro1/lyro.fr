@@ -1,0 +1,51 @@
+
+<div class="topbar">
+  <div class="left">
+    <img class="apple-logo" src="assets/apple-logo-white.png" (click)="openApple()"/>
+    <b>Lyro</b>
+  </div>
+  <div class="right">
+    <p class="date">{{currentDate}}</p>
+  </div>
+</div>
+
+<div class="menu-window" *ngIf="apple">
+  <p (click)="onCloseApple(); openAboutTheMac();">About the Mac</p>
+  <div class="separator"></div>
+  <p [routerLink]="['/login']">Logout...</p>
+  <p [routerLink]="['/']">Restart...</p>
+</div>
+
+<app-launchpad *ngIf="launchpad" (closed)="onLaunchpadClose()"
+                                 (openContacts)="onLaunchpadClose(); openContacts()"
+                                 (openReminder)="onLaunchpadClose(); openReminder()"
+                                 (openSafari)="onLaunchpadClose(); openSafari()"
+                                 (openTerminal)="onLaunchpadClose(); openTerminal()"
+></app-launchpad>
+<app-about-the-mac *ngIf="aboutTheMac" (closed)="onAboutTheMacClosed()"></app-about-the-mac>
+<app-contacts *ngIf="contacts" (closed)="onContactsClosed()"></app-contacts>
+<app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
+<app-safari *ngIf="safari" (closed)="onSafariClosed()"></app-safari>
+<app-terminal *ngIf="terminal" (closed)="onTerminalClosed()"></app-terminal>
+
+<div class="dock">
+  <div class="dock-icon">
+    <img src="assets/launchpad.png" (click)="switchLaunchpad()">
+  </div>
+  <div class="dock-icon">
+    <img class="contacts-icon" src="assets/contacts.png" (click)="onLaunchpadClose(); openContacts()">
+    <div class="dock-icon-indicator app-open-contacts" [ngClass]="{'dock-icon-indicator-open': readyContacts}"></div>
+  </div>
+  <div class="dock-icon reminder">
+    <img class="reminder-icon" src="assets/reminders.png" (click)="onLaunchpadClose(); openReminder()">
+    <div class="dock-icon-indicator app-open-reminder" [ngClass]="{'dock-icon-indicator-open': readyReminder}"></div>
+  </div>
+  <div class="dock-icon">
+    <img class="safari-icon" src="assets/safari.png" (click)="onLaunchpadClose(); openSafari()">
+    <div class="dock-icon-indicator app-open-safari" [ngClass]="{'dock-icon-indicator-open': readySafari}"></div>
+  </div>
+  <div class="dock-icon">
+    <img class="terminal-icon" src="assets/terminal.png" (click)="onLaunchpadClose(); openTerminal()">
+    <div class="dock-icon-indicator app-open-terminal" [ngClass]="{'dock-icon-indicator-open': readyTerminal}"></div>
+  </div>
+</div>
