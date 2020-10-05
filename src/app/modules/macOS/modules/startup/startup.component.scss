@@ -1,0 +1,16 @@
+.startup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+
+  .apple-logo {
+    display: block;
+    width: 9%;
+    margin: 4.5% auto 0;
+    transition: 1s;
+  }
+}
