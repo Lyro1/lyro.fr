@@ -2,7 +2,9 @@
 .contacts {
   position: absolute;
   width: 40vw;
+  max-width: 650px;
   height: 30vw;
+  max-height: 450px;
   top: 3vw;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -97,5 +99,10 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
   }
 }
