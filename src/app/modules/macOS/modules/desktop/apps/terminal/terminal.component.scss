@@ -1,7 +1,9 @@
 .terminal {
   position: absolute;
   width: 40vw;
+  max-width: 550px;
   height: 25vw;
+  max-height: 400px;
   top: 5vw;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -38,6 +40,26 @@
       .preview {
         color: #2fb125;
         margin-right: 0.4vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .terminal {
+
+    .window-header {
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .terminal-content {
+
+      p {
+        margin-left: 0.4vw;
+        font-size: 11px;
       }
     }
   }
