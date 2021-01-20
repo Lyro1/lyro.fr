@@ -14,9 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      
-      - name: Install dependencies
-        uses: php-actions/composer@v2
         
       - name: SSH Server Deploy
         uses: kostya-ten/ssh-server-deploy@v3
