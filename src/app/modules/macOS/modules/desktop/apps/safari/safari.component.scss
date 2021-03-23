@@ -2,7 +2,9 @@
 .safari {
   position: absolute;
   width: 50vw;
+  max-width: 650px;
   height: 34vw;
+  max-height: 450px;
   top: 1.5vw;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -87,7 +89,9 @@
             a {
               display: block;
               width: 3.5vw;
+              max-width: 54px;
               height: 3.5vw;
+              max-height: 54px;
               border-radius: 0.6vw;
               overflow: hidden;
               background-color: white;
@@ -127,6 +131,40 @@
             }
           }
 
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .safari {
+
+    .safari-content {
+
+      .over {
+
+        .cover-content {
+          h2 {
+            font-size: 15px;
+          }
+
+          .favorites {
+            .favorite {
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+
+          .privacy {
+            .blured {
+              p {
+                font-size: 13px;
+
+              }
+            }
+          }
         }
       }
     }
