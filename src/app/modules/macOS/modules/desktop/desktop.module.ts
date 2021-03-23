@@ -8,11 +8,12 @@ import { SafariComponent } from './apps/safari/safari.component';
 import { TerminalComponent } from './apps/terminal/terminal.component';
 import { ContactsComponent } from './apps/contacts/contacts.component';
 import { LaunchpadComponent } from './apps/launchpad/launchpad.component';
+import { ProjectsFolderComponent } from './apps/launchpad/folders/projects-folder/projects-folder.component';
 
 
 
 @NgModule({
-  declarations: [DesktopPageComponent, AboutTheMacComponent, SafariComponent, TerminalComponent, ContactsComponent, LaunchpadComponent],
+  declarations: [DesktopPageComponent, AboutTheMacComponent, SafariComponent, TerminalComponent, ContactsComponent, LaunchpadComponent, ProjectsFolderComponent],
   imports: [
     CommonModule,
     RouterModule,
