@@ -31,6 +31,8 @@ jobs:
         run: npm install -g @angular/cli > /dev/null
       - name: NPM build Angular Production
         run: ng build --prod
+      - name: Install sshpass
+        run: sudo apt-get install sshpass
       - name: Delete Existing Files
         run : sudo sshpass -p ${{ secrets.SERVER_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} 'rm -rf /var/www/lyro.fr/html/*'
 
