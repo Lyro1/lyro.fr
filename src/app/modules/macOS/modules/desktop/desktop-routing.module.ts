@@ -5,7 +5,10 @@ import {DesktopModule} from "./desktop.module";
 
 
 const routes: Routes = [
-  {path: '', component: DesktopPageComponent},
+  {
+    path: '',
+    component: DesktopPageComponent
+  }
 ];
 
 @NgModule({

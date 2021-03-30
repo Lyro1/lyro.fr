@@ -10,7 +10,12 @@ import { ReminderProjectsComponent } from './reminder-projects/reminder-projects
 
 
 @NgModule({
-  declarations: [ReminderPageComponent, ReminderAboutMeComponent, ReminderExperiencesComponent, ReminderScolarshipComponent, ReminderProjectsComponent],
+  declarations: [
+    ReminderPageComponent,
+    ReminderAboutMeComponent,
+    ReminderExperiencesComponent,
+    ReminderScolarshipComponent,
+    ReminderProjectsComponent],
   exports: [
     ReminderPageComponent
   ],

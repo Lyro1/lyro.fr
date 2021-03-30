@@ -1,0 +1,29 @@
+<div class="window appstore">
+  <div class="window-header">
+    <div class="window-header-buttons">
+      <div class="window-header-button close" (click)="closeWindow()"></div>
+      <div class="window-header-button reduce"></div>
+      <div class="window-header-button disable"></div>
+    </div>
+  </div>
+
+  <div class="left">
+    <div class="item item-selected">
+      <i class="f7-icons">star</i>
+      <p>Explore</p>
+    </div>
+    <div class="user">
+      <div class="image">
+        <img src="assets/me.png" alt="Louis Dupont"/>
+      </div>
+      <p>Louis Dupont</p>
+    </div>
+  </div>
+
+  <div class="right">
+    <app-explore-tab [apps]="apps"
+                     (openAppEvent)="selectApp($event)"></app-explore-tab>
+    <app-app-page [appInfos]="selectedApp"
+                  (closeEvent)="selectApp(null)"></app-app-page>
+  </div>
+</div>

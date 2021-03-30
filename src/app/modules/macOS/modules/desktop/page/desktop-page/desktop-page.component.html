@@ -5,6 +5,8 @@
     <b>Lyro</b>
   </div>
   <div class="right">
+    <i class="f7-icons">battery_100</i>
+    <i class="f7-icons">wifi</i>
     <p class="date">{{currentDate}}</p>
   </div>
 </div>
@@ -17,6 +19,7 @@
 </div>
 
 <app-launchpad *ngIf="launchpad" (closed)="onLaunchpadClose()"
+                                 (openAppStore)="onLaunchpadClose(); openAppStore()"
                                  (openContacts)="onLaunchpadClose(); openContacts()"
                                  (openReminder)="onLaunchpadClose(); openReminder()"
                                  (openSafari)="onLaunchpadClose(); openSafari()"
@@ -27,25 +30,45 @@
 <app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
 <app-safari *ngIf="safari" (closed)="onSafariClosed()"></app-safari>
 <app-terminal *ngIf="terminal" (closed)="onTerminalClosed()"></app-terminal>
+<app-app-store *ngIf="appStore" (closed)="onAppStoreClosed()"></app-app-store>
 
 <div class="dock">
   <div class="dock-icon">
-    <img src="assets/launchpad.png" (click)="switchLaunchpad()">
+    <img src="assets/launchpad.png" (click)="switchLaunchpad()" alt="Launchpad"/>
   </div>
   <div class="dock-icon">
-    <img class="contacts-icon" src="assets/contacts.png" (click)="onLaunchpadClose(); openContacts()">
-    <div class="dock-icon-indicator app-open-contacts" [ngClass]="{'dock-icon-indicator-open': readyContacts}"></div>
+    <img class="appstore-icon" src="assets/appstore.png"
+         (click)="onLaunchpadClose(); openAppStore()"
+         alt="App Store">
+    <div class="dock-icon-indicator app-open-appstore"
+         [ngClass]="{'dock-icon-indicator-open': readyAppStore}"></div>
+  </div>
+  <div class="dock-icon">
+    <img class="contacts-icon" src="assets/contacts.png"
+         (click)="onLaunchpadClose(); openContacts()"
+         alt="Contacts">
+    <div class="dock-icon-indicator app-open-contacts"
+         [ngClass]="{'dock-icon-indicator-open': readyContacts}"></div>
   </div>
   <div class="dock-icon reminder">
-    <img class="reminder-icon" src="assets/reminders.png" (click)="onLaunchpadClose(); openReminder()">
-    <div class="dock-icon-indicator app-open-reminder" [ngClass]="{'dock-icon-indicator-open': readyReminder}"></div>
+    <img class="reminder-icon" src="assets/reminders.png"
+         (click)="onLaunchpadClose(); openReminder()"
+         alt="Reminder">
+    <div class="dock-icon-indicator app-open-reminder"
+         [ngClass]="{'dock-icon-indicator-open': readyReminder}"></div>
   </div>
   <div class="dock-icon">
-    <img class="safari-icon" src="assets/safari.png" (click)="onLaunchpadClose(); openSafari()">
-    <div class="dock-icon-indicator app-open-safari" [ngClass]="{'dock-icon-indicator-open': readySafari}"></div>
+    <img class="safari-icon" src="assets/safari.png"
+         (click)="onLaunchpadClose(); openSafari()"
+         alt="Safari">
+    <div class="dock-icon-indicator app-open-safari"
+         [ngClass]="{'dock-icon-indicator-open': readySafari}"></div>
   </div>
   <div class="dock-icon">
-    <img class="terminal-icon" src="assets/terminal.png" (click)="onLaunchpadClose(); openTerminal()">
-    <div class="dock-icon-indicator app-open-terminal" [ngClass]="{'dock-icon-indicator-open': readyTerminal}"></div>
+    <img class="terminal-icon" src="assets/terminal.png"
+         (click)="onLaunchpadClose(); openTerminal()"
+         alt="Terminal">
+    <div class="dock-icon-indicator app-open-terminal"
+         [ngClass]="{'dock-icon-indicator-open': readyTerminal}"></div>
   </div>
 </div>
