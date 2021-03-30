@@ -9,13 +9,6 @@ declare var $: any;
 export class MainLayoutComponent implements OnInit {
 
   public images = [
-    "assets/sf-symbols/checkmark.shield.fill.png",
-    "assets/sf-symbols/chevron.left.png",
-    "assets/sf-symbols/chevron.right.png",
-    "assets/sf-symbols/magnifyingglass.png",
-    "assets/sf-symbols/plus.png",
-    "assets/sf-symbols/square.and.arrow.up.png",
-    "assets/sf-symbols/square.on.square.png",
     "assets/about-me.png",
     "assets/api.png",
     "assets/apple-logo-white.png",
