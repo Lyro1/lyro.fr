@@ -3,6 +3,10 @@
   <div class="close" (click)="closeWindow()"></div>
 
   <div class="app-list">
+    <div class="app" (click)="openAppStore.emit()">
+      <img src="assets/appstore.png"/>
+      <p>App Store</p>
+    </div>
     <div class="app" (click)="openContacts.emit()">
       <img src="assets/contacts.png"/>
       <p>Contacts</p>

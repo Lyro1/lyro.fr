@@ -25,15 +25,11 @@
       .icons {
         display: flex;
 
-        img {
-          height: 1vw;
-          margin: 0.4vw 0.2vw;
-          opacity: 0.6;
-        }
-
-        .chevron {
-          margin-top: 0.55vw;
-          height:0.7vw;
+        i {
+          font-size: 0.8vw;
+          margin: 0 4px;
+          line-height: 26px;
+          color: rgb(140, 140, 140);
         }
 
         .search-bar {
@@ -49,9 +45,11 @@
           display: flex;
           border-radius: 0.15vw;
 
-          img {
-            height: 0.7vw;
-            margin-top: 0.15vw;
+          i {
+            font-size: 0.6vw;
+            margin: 0 4px;
+            line-height: 1vw;
+            color: rgb(140, 140, 140);
           }
         }
       }
@@ -83,7 +81,7 @@
           margin-top: 1vw;
 
           .favorite {
-            width: 3.5vw;
+            width: 4.5vw;
             margin-right: 1vw;
 
             a {
@@ -95,6 +93,7 @@
               border-radius: 0.6vw;
               overflow: hidden;
               background-color: white;
+              margin: 0 auto;
 
               img {
                 width: 100%;

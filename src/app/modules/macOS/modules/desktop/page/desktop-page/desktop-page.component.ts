@@ -28,6 +28,9 @@ export class DesktopPageComponent implements OnInit {
   public readyTerminal = false;
   public terminal = false;
 
+  public readyAppStore = false;
+  public appStore = false;
+
   constructor(private datepipe: DatePipe) {
     this.currentDate = this.datepipe.transform(new Date(), 'EEE LLL dd   h:mm aaa');
   }
@@ -105,6 +108,14 @@ export class DesktopPageComponent implements OnInit {
     }, 2000);
   }
 
+  public openAppStore() {
+    this.readyAppStore = true;
+    this.openAppAnimation('.appstore-icon');
+    setTimeout(() => {
+      this.appStore = true;
+    }, 2000);
+  }
+
   public onCloseApple() {
     this.apple = false;
   }
@@ -138,6 +149,11 @@ export class DesktopPageComponent implements OnInit {
   public onTerminalClosed() {
     this.readyTerminal = false;
     this.terminal = false;
+  }
+
+  public onAppStoreClosed() {
+    this.readyAppStore = false;
+    this.appStore = false;
   }
 
 }

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, NgZone, OnInit, Output} from '@angular/core';
 declare var $: any;
 
 @Component({
@@ -13,8 +13,11 @@ export class LaunchpadComponent implements OnInit {
   @Output() openReminder = new EventEmitter();
   @Output() openSafari = new EventEmitter();
   @Output() openTerminal = new EventEmitter();
+  @Output() openAppStore = new EventEmitter();
 
-  constructor() { }
+  public isProjectsFolderOpen: boolean = false;
+
+  constructor(private zone: NgZone) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +26,11 @@ export class LaunchpadComponent implements OnInit {
     setTimeout(() => {
       $('.launchpad').css('opacity', '1');
     }, 10);
+  }
+
+  public closeProjectsFolder(): void {
+    alert("Closing projects folder");
+    this.isProjectsFolderOpen = false;
   }
 
   public closeWindow() {
