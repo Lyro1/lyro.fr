@@ -6,8 +6,8 @@
   max-height: 450px;
   top: 3vw;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(255, 255, 255, 0.82);
@@ -67,7 +67,7 @@
 
       p {
         margin: 0 0 0 10px;
-        font-size: 0.8vw;
+        font-size: min(0.8vw, 18px);
         line-height: 3vw;
       }
     }

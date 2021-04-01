@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AppInfoModel, AppInfoTechno, Devices} from "./models/app-info.model";
 
 @Component({
@@ -8,6 +8,7 @@ import {AppInfoModel, AppInfoTechno, Devices} from "./models/app-info.model";
 })
 export class AppStoreComponent implements OnInit {
 
+  @Input() zindex: number = 1;
   @Output() closed = new EventEmitter();
   public apps: AppInfoModel[] = [];
   public selectedApp: AppInfoModel | null = null;

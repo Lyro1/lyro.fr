@@ -31,6 +31,8 @@ export class DesktopPageComponent implements OnInit {
   public readyAppStore = false;
   public appStore = false;
 
+  public displayStack: string[] = [];
+
   constructor(private datepipe: DatePipe) {
     this.currentDate = this.datepipe.transform(new Date(), 'EEE LLL dd   h:mm aaa');
   }
@@ -64,6 +66,36 @@ export class DesktopPageComponent implements OnInit {
     }
   }
 
+  private array_move(arr: string[], old_index: number, new_index: number): string[] {
+    if (new_index >= arr.length) {
+      let k = new_index - arr.length + 1;
+      while (k--) {
+        arr.push(undefined);
+      }
+    }
+    arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+    return arr;
+  };
+
+  public getZindexOfApp(appname: string): number {
+    if (!appname || appname === '') {
+      return;
+    }
+    return this.displayStack.length - this.displayStack.findIndex(app => app === appname) + 1;
+  }
+
+  public putAppToForeground(appname: string): void {
+    if (!appname || appname === '') {
+      return;
+    }
+    let index = this.displayStack.findIndex(app => app === appname);
+    if (index != -1) {
+      this.displayStack = this.array_move(this.displayStack, index, 0);
+    } else {
+      this.displayStack.unshift(appname);
+    }
+  }
+
   public openLaunchpad() {
     this.launchpad = true;
   }
@@ -77,43 +109,68 @@ export class DesktopPageComponent implements OnInit {
   }
 
   public openContacts() {
-    this.readyContacts = true;
-    this.openAppAnimation('.contacts-icon');
-    setTimeout(() => {
-      this.contacts = true;
-    }, 2000);
+    if (this.contacts) {
+      this.putAppToForeground('contacts');
+    } else {
+      this.readyContacts = true;
+      this.openAppAnimation('.contacts-icon');
+      setTimeout(() => {
+        this.contacts = true;
+        this.putAppToForeground('contacts');
+      }, 2000);
+    }
   }
 
   public openReminder() {
-    this.readyReminder = true;
-    this.openAppAnimation('.reminder-icon');
-    setTimeout(() => {
-      this.reminder = true;
-    }, 2000);
+    if (this.reminder) {
+      this.putAppToForeground('reminder');
+    } else {
+      this.readyReminder = true;
+      this.openAppAnimation('.reminder-icon');
+      setTimeout(() => {
+        this.reminder = true;
+        this.putAppToForeground('reminder');
+      }, 2000);
+    }
   }
 
   public openSafari() {
-    this.readySafari = true;
-    this.openAppAnimation('.safari-icon');
-    setTimeout(() => {
-      this.safari = true;
-    }, 2000);
+    if (this.safari) {
+      this.putAppToForeground('safari');
+    } else {
+      this.readySafari = true;
+      this.openAppAnimation('.safari-icon');
+      setTimeout(() => {
+        this.safari = true;
+        this.putAppToForeground('safari');
+      }, 2000);
+    }
   }
 
   public openTerminal() {
-    this.readyTerminal = true;
-    this.openAppAnimation('.terminal-icon');
-    setTimeout(() => {
-      this.terminal = true;
-    }, 2000);
+    if (this.terminal) {
+      this.putAppToForeground('terminal');
+    } else {
+      this.readyTerminal = true;
+      this.openAppAnimation('.terminal-icon');
+      setTimeout(() => {
+        this.terminal = true;
+        this.putAppToForeground('terminal');
+      }, 2000);
+    }
   }
 
   public openAppStore() {
-    this.readyAppStore = true;
-    this.openAppAnimation('.appstore-icon');
-    setTimeout(() => {
-      this.appStore = true;
-    }, 2000);
+    if (this.appStore) {
+      this.putAppToForeground('appstore');
+    } else {
+      this.readyAppStore = true;
+      this.openAppAnimation('.appstore-icon');
+      setTimeout(() => {
+        this.appStore = true;
+        this.putAppToForeground('appstore');
+      }, 2000);
+    }
   }
 
   public onCloseApple() {

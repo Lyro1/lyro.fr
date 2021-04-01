@@ -5,10 +5,10 @@
   max-width: 650px;
   height: 30vw;
   max-height: 450px;
-  top: 3vw;
+  top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(255,255,255,0.32);

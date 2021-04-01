@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-reminder-page',
@@ -12,6 +12,7 @@ export class ReminderPageComponent implements OnInit {
   public scholarship = false;
   public projects = false;
 
+  @Input() zindex: number = 1;
   @Output() closed = new EventEmitter();
 
   constructor() { }

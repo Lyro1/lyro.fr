@@ -26,11 +26,31 @@
                                  (openTerminal)="onLaunchpadClose(); openTerminal()"
 ></app-launchpad>
 <app-about-the-mac *ngIf="aboutTheMac" (closed)="onAboutTheMacClosed()"></app-about-the-mac>
-<app-contacts *ngIf="contacts" (closed)="onContactsClosed()"></app-contacts>
-<app-reminder-page *ngIf="reminder" (closed)="onReminderClosed()"></app-reminder-page>
-<app-safari *ngIf="safari" (closed)="onSafariClosed()"></app-safari>
-<app-terminal *ngIf="terminal" (closed)="onTerminalClosed()"></app-terminal>
-<app-app-store *ngIf="appStore" (closed)="onAppStoreClosed()"></app-app-store>
+<app-contacts *ngIf="contacts"
+              (click)="putAppToForeground('contacts')"
+              (closed)="onContactsClosed()"
+              [style]="'z-index: ' + getZindexOfApp('contacts') + '; ' +
+                'position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);'"></app-contacts>
+<app-reminder-page *ngIf="reminder"
+                   (click)="putAppToForeground('reminder')"
+                   (closed)="onReminderClosed()"
+                   [style]="'z-index: ' + getZindexOfApp('reminder') + '; ' +
+                'position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);'"></app-reminder-page>
+<app-safari *ngIf="safari"
+            (click)="putAppToForeground('safari')"
+            (closed)="onSafariClosed()"
+            [style]="'z-index: ' + getZindexOfApp('safari') + '; ' +
+             'position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);'"></app-safari>
+<app-terminal *ngIf="terminal"
+              (click)="putAppToForeground('terminal')"
+              (closed)="onTerminalClosed()"
+              [style]="'z-index: ' + getZindexOfApp('terminal') + '; ' +
+                'position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);'"></app-terminal>
+<app-app-store *ngIf="appStore"
+               (click)="putAppToForeground('appstore')"
+               (closed)="onAppStoreClosed()"
+               [style]="'z-index: ' + getZindexOfApp('appstore') + '; ' +
+                'position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%);'"></app-app-store>
 
 <div class="dock">
   <div class="dock-icon">
