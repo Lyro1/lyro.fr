@@ -1,6 +1,6 @@
 # LYRO
 
-This is the 8th version of my personal website. 
+This is the 9th version of my personal website. 
 
 It is a homemade, handcrafted version of a very light 
 macOS in a MacBook Pro, with apps that have been designed
