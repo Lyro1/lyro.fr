@@ -1,0 +1,14 @@
+
+<div class="project-bloc" *ngIf="project">
+  <div class="placeholder">
+    <img src="assets/{{project.image}}" alt="{{project.title}}"/>
+  </div>
+
+  <div class="infos">
+    <h2><span class="slash">/</span>{{project.title}}</h2>
+
+    <p>
+      {{project.description}}
+    </p>
+  </div>
+</div>

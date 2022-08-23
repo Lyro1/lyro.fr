@@ -1,0 +1,39 @@
+
+.project-bloc {
+  width: 100%;
+  margin-bottom: 5vh;
+
+  .placeholder {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 1px solid #eee;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .infos {
+    h2 {
+      .slash {
+        color: #CCC;
+      }
+    }
+
+    p {
+      line-height: 1.8;
+    }
+  }
+}
+
+.project-bloc:hover {
+  cursor: pointer;
+
+  .placeholder {
+    box-shadow: rgba(19, 99, 223, 0.3) 0 4px 20px 0;
+    transition: 0.5s;
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "MyFeedbacks",
+    "shortname": "myfeedbacks",
+    "url": "https://myfeedbacks.fr",
+    "image": "myfeedbacks.png",
+    "description": "A feedback management service developed to help users and companies improve some of the best products in the world.",
+    "article": null
+  },
+  {
+    "id": 2,
+    "title": "Stoodent",
+    "shortname": "stoodent",
+    "url": null,
+    "image": "stoodent.png",
+    "description": "Our dream to build the best school management system, to provide the best experience to students, teachers and staff.",
+    "article": null
+  },
+  {
+    "id": 3,
+    "title": "Digitab",
+    "shortname": "digitab",
+    "url": null,
+    "image": "digitab.png",
+    "description": "Go to a restaurant with your friends, and make sure everyone pays their share. With a bill scanner.",
+    "article": null
+  },
+  {
+    "id": 4,
+    "title": "Covid-19 - Centres de test",
+    "shortname": "covid19-centres-de-test",
+    "url": null,
+    "image": "covid19-centres-de-test.png",
+    "description": "As the Covid-19 pandemic started, we decided to build a platform to regroup all the testing centers when it did not exist.",
+    "article": null
+  }
+]

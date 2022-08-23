@@ -1,0 +1,46 @@
+
+.getInTouch {
+  width: 60%;
+  margin: 5vh auto 0;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 3rem;
+
+    a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline dashed;
+    }
+
+    .linkedin {
+      color: rgb(0, 65, 130);
+    }
+
+    .twitter {
+      color: rgb(29, 161, 242);
+    }
+
+    .github {
+      color: rgb(36, 41, 47);
+    }
+
+    .mail {
+      color: rgb(19, 99, 223);
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .getInTouch {
+    width: 80%;
+
+    h3 {
+      font-size: 14vw;
+    }
+  }
+}

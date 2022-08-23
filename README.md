@@ -1,29 +1,27 @@
 # LYRO
 
-This is the 9th version of my personal website. 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-It is a homemade, handcrafted version of a very light 
-macOS in a MacBook Pro, with apps that have been designed
-to present me and my work.
+## Development server
 
-### Can I use it?
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-I published it as a demonstration of my work, and you are
-free to use it as long as you do both things:
-- Mention my name and link my project.
-- Differentiate it enough from my personal website.
+## Code scaffolding
 
-Please note that this is not a template, you should not just
-replace text and content.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Hi there, I found an issue...
+## Build
 
-Well, I am not perfect, so don't hesitate to open an Issue
-describing what your issue was. If you can, share a screenshot
-or a screen recording showing exactly what the problem is, it
-will be way easier for me to fix it.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-### Hey man, I think this could be a great idea!
+## Running unit tests
 
-Sure! I am very open to any suggestion or improvements on this
-website. Don't hesitate to suggest stuff in an Issue!
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
