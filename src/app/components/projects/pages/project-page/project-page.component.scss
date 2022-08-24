@@ -62,6 +62,10 @@
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
+    .leading-img {
+      margin-bottom: 5vh;
+    }
+
     .description {
       text-align: center;
       color: #888;
@@ -85,6 +89,21 @@
         width: 46%;
       }
     }
+
+    .flex-3 {
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        width: 30%;
+      }
+    }
+
+    ul {
+      li {
+        margin: 10px 0;
+      }
+    }
   }
 }
 
@@ -97,7 +116,7 @@
         width: 100%;
       }
 
-      .flex {
+      .flex, .flex-3 {
         flex-direction: column;
 
         img {

@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {Router} from "@angular/router";
 import {Project} from "../../models/project.model";
 import ProjectsList from "../../../../../assets/projects.json";
 
@@ -19,6 +19,9 @@ export class ProjectPageComponent implements OnInit {
   ngOnInit(): void {
     this.projects = ProjectsList;
     this.project = this.loadProject(this.router.routerState.snapshot.url.split('/')[2]);
+    if (!this.project) {
+      this.router.navigate(['/projects']);
+    }
   }
 
   private loadProject(shortname: string): Project|null {
