@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Project} from "../../models/project.model";
 import ProjectsList from "../../../../../assets/projects.json";
@@ -6,7 +6,8 @@ import ProjectsList from "../../../../../assets/projects.json";
 @Component({
   selector: 'app-project-page',
   templateUrl: './project-page.component.html',
-  styleUrls: ['./project-page.component.scss']
+  styleUrls: ['./project-page.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ProjectPageComponent implements OnInit {
 

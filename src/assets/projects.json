@@ -6,7 +6,7 @@
     "url": "https://myfeedbacks.fr",
     "image": "myfeedbacks.png",
     "description": "A feedback management service developed to help users and companies improve some of the best products in the world.",
-    "article": null
+    "article": "<img src=\"assets/projects/myfeedbacks/1.png\" alt=\"MyFeedbacks landing page\"/>\n\n<p>\n  MyFeedbacks is a platform that allows you to share feedbacks, ideas and bug reports on any app or online service that you may think of. This project was built with my good friend <a href=\"https://romainbourre.fr\" target=\"_blank\">@romainbourre</a>, and we are still improving it on our free time.\n</p>\n\n<p>\n  I have been developing the entire visual interface, and I am in charge of the front-end development, done in Angular. I am working on the MyFeedbacks visual framework, to make sure all the components are harmonized across the whole platform.\n</p>\n\n<div class=\"flex\">\n  \t<img src=\"assets/projects/myfeedbacks/2.png\" alt=\"MyFeedbacks light mode project page\"/>\n  <img src=\"assets/projects/myfeedbacks/3.png\" alt=\"MyFeedbacks dark mode project page\"/>\n</div>\n<p class=\"description\">\n  I developed an adaptative dark theme based on preferences, to improve accessibility.\n</p>\n\n<img src=\"assets/projects/myfeedbacks/4.png\" alt=\"MyFeedbacks landing page\"/>\n<p class=\"description\">\n  The color scheme must help to quickly understand the status of a post.\n</p>\n\n<h3>Our stack</h3>\n\n<ul>\n  <li>Angular</li>\n  <li>.NET</li>\n  <li>SQLite</li>\n  <li>MySQL</li>\n  <li>Github</li>\n</ul>"
   },
   {
     "id": 2,
