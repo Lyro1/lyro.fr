@@ -1,0 +1,10 @@
+
+<ng-container *ngIf="projects">
+  <div class="projects">
+    <app-project-bloc *ngFor="let project of projects"
+                      [project]="project"
+                      [routerLink]="[project.shortname]"
+    ></app-project-bloc>
+  </div>
+</ng-container>
+

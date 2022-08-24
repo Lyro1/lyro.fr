@@ -1,0 +1,134 @@
+
+.project {
+  width: 60%;
+  margin: 10% auto 0;
+
+  .infos {
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      a {
+        font-size: 0.8rem;
+        color: #aaa;
+        text-decoration: none;
+      }
+
+      .slash {
+        color: #CCC;
+        padding: 0 8px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        line-height: 1.8;
+      }
+    }
+
+    .visit {
+      border-radius: 6px;
+      padding: 12px 24px;
+      border: 1px solid rgb(19, 99, 223);
+      color: rgb(19, 99, 223);
+      font-size: 0.7rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .visit:hover {
+      background-color: rgb(19, 99, 223);
+      color: white;
+      box-shadow: rgba(19, 99, 223, 0.3) 0 4px 20px 0;
+      transition: 0.3s;
+    }
+  }
+
+  .content {
+    width: 100%;
+    margin-top: 10vh;
+
+    img {
+      display: block;
+      width: 80%;
+      margin: 5vh auto 0;
+      border-radius: 6px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    .leading-img {
+      margin-bottom: 5vh;
+    }
+
+    .description {
+      text-align: center;
+      color: #888;
+      font-size: 0.8rem;
+      margin-bottom: 5vh;
+    }
+
+    p {
+      line-height: 1.6;
+
+      a {
+        color: #444;
+      }
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        width: 46%;
+      }
+    }
+
+    .flex-3 {
+      display: flex;
+      justify-content: space-around;
+
+      img {
+        width: 30%;
+      }
+    }
+
+    ul {
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .project {
+    width: 80%;
+
+    .content {
+      img {
+        width: 100%;
+      }
+
+      .flex, .flex-3 {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .project {
+    width: 80%;
+  }
+}

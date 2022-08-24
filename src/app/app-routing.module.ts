@@ -1,17 +1,25 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {StartupComponent} from "./modules/macOS/modules/startup/startup.component";
-import {LoginComponent} from "./modules/macOS/modules/login/login.component";
-
+import {ExtraOptions, RouterModule, Routes} from '@angular/router';
+import {CareerComponent} from "./components/career/career.component";
+import {GetInTouchComponent} from "./components/get-in-touch/get-in-touch.component";
+import {WritingsComponent} from "./components/writings/writings.component";
 
 const routes: Routes = [
-  {path: '', component: StartupComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'desktop', loadChildren: () => import('./modules/macOS/modules/desktop/desktop-routing.module').then(m => m.DesktopRoutingModule)}
+  { path: 'career', component: CareerComponent },
+  {
+    path: 'projects',
+    loadChildren: () => import('./components/projects/projects.routing.module').then(m => m.ProjectsRoutingModule)
+  },
+  { path: 'writings', component: WritingsComponent},
+  { path: 'getintouch', component: GetInTouchComponent}
 ];
 
+export const routingConfiguration: ExtraOptions = {
+  paramsInheritanceStrategy: 'always'
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routingConfiguration)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
