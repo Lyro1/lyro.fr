@@ -18,12 +18,17 @@
       text-decoration: none;
       color: #888;
       font-size: 0.9rem;
-      transition: 0.3s;
-    }
+      transition: 0.1s;
 
-    .menu-item:hover {
-      color: #444;
-      cursor: pointer;
+      &:hover {
+        color: #444;
+        background-color: #EEE;
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: scale(0.92);
+      }
     }
 
     .menu-item-focus {
@@ -31,6 +36,12 @@
       box-shadow: rgba(19, 99, 223, 0.3) 0 4px 20px 0;
       transition: 0.3s;
       color: white;
+
+      &:hover {
+        color: #444;
+        background-color: rgb(19, 99, 223);
+        cursor: pointer;
+      }
     }
 
     .menu-item-focus:hover {
