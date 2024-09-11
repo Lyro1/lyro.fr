@@ -1,28 +1,41 @@
 
 .menu {
-  width: 60%;
-  margin: 0 auto;
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  height: 52px;
+  border-radius: 26px;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(230, 230, 230);
+  box-shadow: rgba(100, 100, 111, 0.1) 0 8px 28px 0;
 
   ol {
+    height: 44px;
     display: flex;
-    list-style: none;
+    gap: 8px;
     justify-content: left;
     flex-wrap: wrap;
+    list-style: none;
     padding: 0;
+    box-sizing: border-box;
+    margin: 4px;
 
     .menu-item {
-      padding: 8px 16px;
-      margin: 0 28px 0 0;
-      margin-bottom: 16px;
-      border-radius: 20px;
+      box-sizing: border-box;
+      height: 44px;
+      padding: 0 16px;
+      border-radius: 22px;
       text-decoration: none;
       color: #888;
       font-size: 0.9rem;
       transition: 0.1s;
+      line-height: 44px;
 
       &:hover {
         color: #444;
-        background-color: #EEE;
+        background-color: rgba(220, 220, 220, 0.3);
         cursor: pointer;
       }
 
