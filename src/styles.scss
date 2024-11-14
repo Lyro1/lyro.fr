@@ -2,8 +2,52 @@
 
 html, body {
   font-family: 'Rubik', sans-serif;
-  background: rgb(242, 243, 240);
-  background-image: url('assets/noise.png');
-  background-attachment: fixed;
+  background: rgb(242, 243, 240) url('assets/noise.png') fixed;
   color: #444;
+}
+
+body {
+  width: 90vw;
+  max-width: 718px;
+  margin: 0 auto;
+  padding-bottom: 10%;
+}
+
+.tile {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: rgba(100, 100, 111, 0.1) 0 4px 16px 0;
+  border: 3px solid transparent;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+
+  .row-1 {
+    width: 33%;
+    aspect-ratio: 1;
+  }
+
+  .row-2 {
+    width: 66%;
+    aspect-ratio: 2;
+  }
+
+  .row-3 {
+    width: 100%;
+    aspect-ratio: 3;
+  }
+
+  @media only screen and (max-width: 620px) {
+    flex-direction: column;
+
+    .row-1, .row-2, .row-3 {
+      width: 100%;
+      aspect-ratio: auto;
+    }
+  }
 }

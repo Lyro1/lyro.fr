@@ -1,19 +1,37 @@
 
 .landing {
-  width: 60%;
-  margin: 10% auto 0;
+  padding-top: 10%;
 
   .name {
     display: flex;
     align-items: center;
 
-    img {
-      height: 3.5rem;
+    &__video {
+      height: 4rem;
+      width: 4rem;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      video {
+        width: 6rem;
+        height: 6rem;
+        margin-top: 0.5rem;
+        transition: 0.1s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2) rotate(-5deg);
+        }
+      }
+
     }
 
     h1 {
       color: #ccc;
       font-size: 2rem;
+      margin-left: 16px;
     }
   }
 
@@ -21,24 +39,12 @@
     color: #444;
     font-size: 4em;
 
-    .riseup {
-      background-color: #f3ec78;
-      background-image: linear-gradient(45deg,#fb91a3,#ea6852,#ffa168);
-      background-size: 100%;
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
-    }
-
     .balthasart {
       background: rgb(215,73,48);
       background: linear-gradient(90deg, rgba(215,73,48,1) 0%, rgba(239,136,118,1) 42%, rgba(233,166,154,1) 100%);
       background-size: 100%;
       -webkit-background-clip: text;
-      -moz-background-clip: text;
       -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
     }
   }
 }

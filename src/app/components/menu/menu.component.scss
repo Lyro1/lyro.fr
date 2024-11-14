@@ -6,10 +6,11 @@
   height: 52px;
   border-radius: 26px;
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(230, 230, 230);
   box-shadow: rgba(100, 100, 111, 0.1) 0 8px 28px 0;
+  z-index: 10;
 
   ol {
     height: 44px;
@@ -30,12 +31,14 @@
       text-decoration: none;
       color: #888;
       font-size: 0.9rem;
-      transition: 0.1s;
       line-height: 44px;
+      border: 1px solid transparent;
+      transition: 0.1s ease-in-out;
 
       &:hover {
         color: #444;
         background-color: rgba(220, 220, 220, 0.3);
+        border: 1px solid rgba(220, 220, 220, 0.2);
         cursor: pointer;
       }
 

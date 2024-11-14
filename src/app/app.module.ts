@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -9,6 +8,7 @@ import { GetInTouchComponent } from './components/get-in-touch/get-in-touch.comp
 import { WritingsComponent } from './components/writings/writings.component';
 import {CommonModule} from "@angular/common";
 import {ProjectsModule} from "./components/projects/projects.module";
+import {AboutMeComponent} from "./components/about-me/about-me.component";
 
 @NgModule({
   declarations: [
@@ -19,12 +19,12 @@ import {ProjectsModule} from "./components/projects/projects.module";
     GetInTouchComponent,
     WritingsComponent,
   ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    AppRoutingModule,
-    ProjectsModule
-  ],
+    imports: [
+        CommonModule,
+        BrowserModule,
+        ProjectsModule,
+        AboutMeComponent
+    ],
   providers: [],
   exports: [
     BrowserModule
