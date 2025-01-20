@@ -1,5 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
 
 export enum Navigation {
   career,

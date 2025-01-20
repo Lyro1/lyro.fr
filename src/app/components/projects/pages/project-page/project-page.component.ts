@@ -12,9 +12,10 @@ import ProjectsList from "../../../../../assets/projects.json";
 export class ProjectPageComponent implements OnInit {
 
   public projects: Project[] = [];
-  public project: Project|null = null;
+  public project: Project | null = null;
 
-  constructor(public router: Router) { }
+  constructor(public router: Router) {
+  }
 
   ngOnInit(): void {
     this.projects = ProjectsList;
@@ -24,7 +25,7 @@ export class ProjectPageComponent implements OnInit {
     }
   }
 
-  private loadProject(shortname: string): Project|null {
+  private loadProject(shortname: string): Project | null {
     return this.projects.filter((p) => p.shortname == shortname)[0] || null;
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Project} from "../../models/project.model";
 import ProjectsList from "../../../../../assets/projects.json"
 
@@ -11,7 +11,8 @@ export class ProjectListComponent implements OnInit {
 
   public projects: Project[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.projects = ProjectsList

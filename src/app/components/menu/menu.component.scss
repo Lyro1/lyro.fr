@@ -17,16 +17,21 @@
     display: flex;
     gap: 8px;
     justify-content: left;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style: none;
+    width: fit-content;
     padding: 0;
     box-sizing: border-box;
     margin: 4px;
 
     .menu-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
       box-sizing: border-box;
       height: 44px;
-      padding: 0 16px;
+      padding: 0 32px 0 16px;
       border-radius: 22px;
       text-decoration: none;
       color: #888;
@@ -34,16 +39,31 @@
       line-height: 44px;
       border: 1px solid transparent;
       transition: 0.1s ease-in-out;
+      flex-wrap: nowrap;
+
+      ion-icon {
+        width: 0;
+        transition: 0.1s ease-in-out;
+      }
 
       &:hover {
         color: #444;
         background-color: rgba(220, 220, 220, 0.3);
         border: 1px solid rgba(220, 220, 220, 0.2);
         cursor: pointer;
+        padding: 0 16px;
+
+        ion-icon {
+          width: 16px;
+        }
       }
 
       &:active {
         transform: scale(0.92);
+      }
+
+      span {
+        white-space: nowrap;
       }
     }
 

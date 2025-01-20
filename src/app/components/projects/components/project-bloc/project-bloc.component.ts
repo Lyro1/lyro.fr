@@ -10,7 +10,8 @@ export class ProjectBlocComponent implements OnInit {
 
   @Input() project: Project | null = null;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

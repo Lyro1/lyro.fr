@@ -1,15 +1,14 @@
-
 <ng-container *ngIf="project">
   <div class="project-bloc">
     <div class="placeholder">
-      <img src="assets/{{project.image}}" alt="{{project.title}}"/>
+      <img alt="{{project.title}}" src="assets/{{project.image}}"/>
     </div>
 
     <div class="infos">
-      <h2><span class="slash">/</span>{{project.title}}</h2>
+      <h2><span class="slash">/</span>{{ project.title }}</h2>
 
       <p>
-        {{project.description}}
+        {{ project.description }}
       </p>
     </div>
   </div>

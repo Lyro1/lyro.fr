@@ -32,6 +32,11 @@ body {
     aspect-ratio: 1;
   }
 
+  .row-15 {
+    width: 50%;
+    aspect-ratio: 1.5;
+  }
+
   .row-2 {
     width: 66%;
     aspect-ratio: 2;
@@ -50,4 +55,41 @@ body {
       aspect-ratio: auto;
     }
   }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  height: 42px;
+  padding: 16px;
+  border-radius: 21px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #444;
+  border: 1.5px solid #444;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.1s ease-in-out;
+  backdrop-filter: blur(8px);
+  font-weight: 700;
+
+  &:hover {
+    transform: scale(1.04) rotate(-2.5deg);
+  }
+
+  &--secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1.5px solid #fff;
+  }
+
+  ion-icon {
+    font-size: 18px;
+  }
+}
+
+ion-icon {
+  --ionicon-stroke-width: 52px;
 }

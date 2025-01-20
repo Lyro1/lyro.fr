@@ -1,19 +1,18 @@
-
-<div class="project" *ngIf="project">
+<div *ngIf="project" class="project">
   <div class="infos">
     <div class="title">
       <a [routerLink]="['/projects']">↤ Projects </a>
       <p class="slash">/</p>
-      <h2>{{project.title}}</h2>
+      <h2>{{ project.title }}</h2>
     </div>
-    <a class="visit"
+    <a *ngIf="project.url"
+       class="visit"
        href="{{project.url}}"
-       target="_blank"
-       *ngIf="project.url">
+       target="_blank">
       Check the project ↗
     </a>
   </div>
 
-  <div class="content" [innerHTML]="project.article"></div>
+  <div [innerHTML]="project.article" class="content"></div>
 
 </div>

@@ -1,20 +1,19 @@
-
 export class Project {
   public id: number;
   public title: string;
   public shortname: string;
   public image: string;
-  public url: string|null = null;
+  public url: string | null = null;
   public description: string;
-  public article: string|null = null;
+  public article: string | null = null;
 
   public constructor(id: number,
                      title: string,
                      shortname: string,
                      image: string,
-                     url: string|null = null,
+                     url: string | null = null,
                      description: string,
-                     article: string|null = null) {
+                     article: string | null = null) {
     this.id = id;
     this.title = title;
     this.shortname = shortname;

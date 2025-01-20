@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Navigation} from "./components/menu/menu.component";
 
 @Component({
