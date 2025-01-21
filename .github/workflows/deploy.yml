@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
 
-name: CI
+name: Deploy Lyro.fr to Production
 
 on:
   push:
@@ -24,14 +24,19 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: NPM Install
         run: npm install
+
       - name: NPM Install Angular
         run: npm install -g @angular/cli > /dev/null
+
       - name: NPM build Angular Production
-        run: ng build --prod
+        run: ng build --configuration production --verbose
+
       - name: Install sshpass
         run: sudo apt-get install sshpass
+
       - name: Delete Existing Files
         run : sudo sshpass -p ${{ secrets.SERVER_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} 'rm -rf /var/www/lyro.fr/html/*'
 
@@ -42,5 +47,6 @@ jobs:
           cd ..
           cd ..
           sudo sshpass -p ${{ secrets.SERVER_PASSWORD }} scp -v -o StrictHostKeyChecking=no -r app.tar.gz ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/var/www/lyro.fr/html
+
       - name: Uncompress new Files
         run : sudo sshpass -p ${{ secrets.SERVER_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} 'cd /var/www/lyro.fr/html && tar -xzvf app.tar.gz && rm app.tar.gz && mv lyro/* . && rm -rRf lyro/'
