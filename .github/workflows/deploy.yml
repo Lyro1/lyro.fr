@@ -52,7 +52,7 @@ jobs:
 
       - name: Compress and Copy New Files to server
         run: |
-          cd dist/lyro
+          cd dist/lyro/browser
           tar -czvf ../app.tar.gz .
           cd ..
           scp -o StrictHostKeyChecking=no -P ${{ secrets.SSH_PORT }} app.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/lyro.fr/html
