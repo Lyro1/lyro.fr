@@ -1,9 +1,29 @@
-
 <nav class="menu">
   <ol>
-    <li class="menu-item" routerLinkActive="menu-item-focus" [routerLink]="['/career']">Career</li>
-    <li class="menu-item" routerLinkActive="menu-item-focus" [routerLink]="['/projects']">Projects</li>
-    <li class="menu-item" routerLinkActive="menu-item-focus" [routerLink]="['/writings']">Writings</li>
-    <li class="menu-item" routerLinkActive="menu-item-focus" [routerLink]="['/getintouch']">Get in touch</li>
+    <li class="menu-item"
+        [ngClass]="{'menu-item--active': activeSection === 'career'}"
+        (click)="scrollToSection('career')"
+    >
+      <ion-icon name="briefcase-outline"></ion-icon>
+      <span>Career</span>
+    </li>
+    <li class="menu-item"
+        [ngClass]="{'menu-item--active': activeSection === 'projects'}"
+        (click)="scrollToSection('projects')">
+      <ion-icon name="laptop-outline"></ion-icon>
+      <span>Projects</span>
+    </li>
+    <li class="menu-item"
+        [ngClass]="{'menu-item--active': activeSection === 'passions'}"
+        (click)="scrollToSection('passions')">
+      <ion-icon name="flash-outline"></ion-icon>
+      <span>Passions</span>
+    </li>
+    <li class="menu-item"
+        [ngClass]="{'menu-item--active': activeSection === 'get-in-touch'}"
+        (click)="scrollToSection('get-in-touch')">
+      <ion-icon name="paper-plane-outline"></ion-icon>
+      <span>Get in touch</span>
+    </li>
   </ol>
 </nav>
