@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-writings',
-  templateUrl: './writings.component.html',
-  styleUrls: ['./writings.component.scss']
+    selector: 'app-writings',
+    templateUrl: './writings.component.html',
+    styleUrls: ['./writings.component.scss'],
+    standalone: false
 })
 export class WritingsComponent implements OnInit {
 

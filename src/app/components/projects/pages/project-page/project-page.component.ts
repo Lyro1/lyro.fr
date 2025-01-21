@@ -4,10 +4,11 @@ import {Project} from "../../models/project.model";
 import ProjectsList from "../../../../../assets/projects.json";
 
 @Component({
-  selector: 'app-project-page',
-  templateUrl: './project-page.component.html',
-  styleUrls: ['./project-page.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-project-page',
+    templateUrl: './project-page.component.html',
+    styleUrls: ['./project-page.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class ProjectPageComponent implements OnInit {
 
