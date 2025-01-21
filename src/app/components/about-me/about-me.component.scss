@@ -684,6 +684,53 @@ section {
       }
     }
 
+    &--music {
+      .tile__content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .btn {
+          background-color: rgb(27, 181, 82);
+          color: #fff;
+          border-color: rgb(27, 181, 82);
+        }
+      }
+    }
+
+    &--motorsport {
+      color: #444;
+      text-decoration: none;
+      transition: 0.1s ease-in-out;
+
+      .car {
+        position: relative;
+        width: 100%;
+        margin-bottom: -16px;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0));
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &:hover {
+        border: 3px solid #444;
+        transform: rotate(-2deg);
+      }
+    }
+
     &--socials {
       display: flex;
       justify-content: center;
