@@ -1,16 +1,96 @@
 <div class="row">
   <div class="about-me tile row-2">
-    <h3>Passionate software engineer</h3>
+    <h3>Passionate Software Engineer</h3>
     <p>
       I have been building web apps, product and digital experiences for nearly 15 years now, with a strong belief in
       quality, fun and delightful experiences.
     </p>
+
+    <div class="skills">
+      <p class="skills__title">My daily tools include</p>
+      <div class="skills__list-container">
+        <div class="skills__list" #skillsList>
+          <div class="skill">
+            <img src="assets/angular.png" alt="Angular"/>
+            <p>Angular</p>
+          </div>
+          <div class="skill">
+            <img src="assets/symfony.png" alt="Symfony"/>
+            <p>Symfony</p>
+          </div>
+          <div class="skill">
+            <img src="assets/php.png" alt="PHP"/>
+            <p>PHP</p>
+          </div>
+          <div class="skill">
+            <img src="assets/github.png" alt="Github"/>
+            <p>Github</p>
+          </div>
+          <div class="skill">
+            <img src="assets/docker.webp" alt="Docker"/>
+            <p>Docker</p>
+          </div>
+          <div class="skill">
+            <img src="assets/python.png" alt="Python"/>
+            <p>Python</p>
+          </div>
+          <div class="skill">
+            <img src="assets/mysql.png" alt="MySQL"/>
+            <p>MySQL</p>
+          </div>
+          <div class="skill">
+            <img src="assets/gitlab.svg" alt="Gitlab"/>
+            <p>Gitlab</p>
+          </div>
+          <div class="skill">
+            <img src="assets/jetbrains.webp" alt="Jetbrains"/>
+            <p>Jetbrains</p>
+          </div>
+          <div class="skill">
+            <img src="assets/figma.png" alt="Figma"/>
+            <p>Figma</p>
+          </div>
+          <div class="skill">
+            <img src="assets/gcp.png" alt="Google Cloud Platform"/>
+            <p>Google Cloud Platform</p>
+          </div>
+          <div class="skill">
+            <img src="assets/sentry.svg" alt="Sentry"/>
+            <p>Sentry</p>
+          </div>
+          <div class="skill">
+            <img src="assets/jira.png" alt="Jira"/>
+            <p>Jira</p>
+          </div>
+          <div class="skill">
+            <img src="assets/stripe.png" alt="Stripe"/>
+            <p>Stripe</p>
+          </div>
+          <div class="skill">
+            <img src="assets/loops.jpeg" alt="Loops"/>
+            <p>Loops</p>
+          </div>
+          <div class="skill">
+            <img src="assets/notion.png" alt="Notion"/>
+            <p>Notion</p>
+          </div>
+          <div class="skill">
+            <img src="assets/swift.svg" alt="Swift"/>
+            <p>Swift</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="row-1 tile tile--location">
     <div class="map">
       <div class="map__location">
         <ion-icon name="location-outline"></ion-icon>
-        <p>Currently in <b>Paris, France</b></p>
+        <p>Currently in <b>Paris 🇫🇷</b></p>
+      </div>
+      <div class="map__next">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+        <p>Next: <b>Bali 🇮🇩</b></p>
       </div>
       <div class="map__image">
         <img src="assets/paris.png" alt="Paris, France"/>
@@ -108,35 +188,99 @@
 <section id="project">
   <div class="title">
     <ion-icon name="laptop-outline"></ion-icon>
-    <div>
-      <h2>Projects</h2>
-      <p></p>
-    </div>
+    <h2>Projects</h2>
+  </div>
 
+  <div class="row">
+    <div class="row-2 tile tile--drive-league">
+      <div class="tile__content">
+        <h3>Drive League</h3>
+        <div class="time">
+          <div class="online online--soon"></div>
+          <p>Coming soon</p>
+        </div>
+
+        <div class="building">
+          <img src="assets/building.png" alt="Drive League"/>
+        </div>
+      </div>
+
+    </div>
+    <a class="row-1 tile tile--slotmate"
+       href="https://slotmate.app"
+       target="_blank"
+    >
+      <div class="tile__content">
+        <div class="open">
+          <ion-icon name="open-outline"></ion-icon>
+        </div>
+        <h3>Slotmate</h3>
+        <div class="time">
+          <div class="online"></div>
+          <p>Online</p>
+        </div>
+        <div>
+          <p>An app that allows you to get your friend's availability easily
+            to book your next night out, trip or activity together!
+          </p>
+        </div>
+
+        <div class="mockup">
+          <img src="assets/slotmate.png" alt="Slotmate"/>
+        </div>
+      </div>
+    </a>
   </div>
   <div class="row">
-    <div class="row-2 tile">
-      <h3>Drive League</h3>
-    </div>
-    <div class="row-1 tile">
-      <h3>Slotmate</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="row-15 tile">
-      <h3>MyFeedbacks</h3>
-    </div>
-    <div class="row-15 tile">
-      <h3>Rentily.io</h3>
-    </div>
+    <a class="row-15 tile tile--myfeedbacks"
+       href="https://myfeedbacks.com"
+       target="_blank"
+    >
+      <div class="tile__content">
+        <div class="open">
+          <ion-icon name="open-outline"></ion-icon>
+        </div>
+        <h3>MyFeedbacks</h3>
+        <div class="time">
+          <div class="online"></div>
+          <p>Online</p>
+        </div>
+        <div>
+          <p>Get valuable insights and feedback on your product, directly from your user base</p>
+        </div>
+        <div class="mockup">
+          <img src="assets/myfeedbacks.png" alt="MyFeedbacks"/>
+        </div>
+      </div>
+    </a>
+    <a class="row-15 tile tile--rentilyio"
+       href="https://rentily.io"
+       target="_blank"
+    >
+      <div class="tile__content">
+        <div class="open">
+          <ion-icon name="open-outline"></ion-icon>
+        </div>
+        <h3>Rentily.io</h3>
+        <div class="time">
+          <div class="online"></div>
+          <p>Online</p>
+        </div>
+        <div>
+          <p>Manage your real estate portfolio and rental investments effortlessly</p>
+        </div>
+        <div class="mockup">
+          <img src="assets/rentilyio.png" alt="Rentily.io"/>
+        </div>
+      </div>
+    </a>
   </div>
 </section>
 
-
-<section id="sports">
+<section id="passions">
   <div class="title">
     <ion-icon name="flash-outline"></ion-icon>
-    <h2>Sports</h2>
+    <h2>Passions</h2>
   </div>
   <div class="row">
     <div class="row-2 tile tile--surf">
@@ -177,6 +321,28 @@
       </div>
     </a>
   </div>
+  <div class="row">
+    <div class="row-15 tile">
+      <div>
+        <h3>Motorsport</h3>
+        <p>
+          Following daily Formula One, MotoGP and other series, I am passionate about the adrenaline of motorsport.
+        </p>
+      </div>
+    </div>
+    <div class="row-15 tile">
+      <div class="tile__content">
+        <h3>Music</h3>
+        <p>
+          Spotify Wrapped nerd. Electronic music. Indy. Pop-rock. Synthwave.
+        </p>
+        <p class="tags">
+          #Madeon #PorterRobinson #OwlCity #The1975 #Coldplay #JonBellion #MacMiller #Valley #OhWonder
+          #TheMidnight #AbbyHolliday #TheJapaneseHouse #NovoAmor #Phoenix
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="get-in-touch">
@@ -185,8 +351,27 @@
     <h2>Get in touch</h2>
   </div>
   <div class="row">
-    <div class="row-3 tile">
-
+    <div class="row-3 tile tile--socials">
+      <div class="socials">
+        <a class="social" href="https://github.com/Lyro1" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a class="social" href="https://x.com/louist_dupont" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a class="social" href="https://www.instagram.com/louist.dupont/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class="social" href="https://stackoverflow.com/users/7804279/louis-lyro-dupont" target="_blank">
+          <ion-icon name="logo-stackoverflow"></ion-icon>
+        </a>
+        <a class="social" href="https://www.linkedin.com/in/ltdupont/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a class="social" href="https://cal.com/louisdupont" target="_blank">
+          <ion-icon name="call-outline"></ion-icon>
+        </a>
+      </div>
     </div>
   </div>
 </section>
