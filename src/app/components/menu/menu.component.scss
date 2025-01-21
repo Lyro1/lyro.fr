@@ -46,8 +46,20 @@
         transition: 0.1s ease-in-out;
       }
 
+      &--active {
+        color: #111;
+        background-color: rgba(220, 220, 220, 0.3);
+        border: 1px solid rgba(220, 220, 220, 0.2);
+        cursor: pointer;
+        padding: 0 16px;
+
+        ion-icon {
+          width: 16px;
+        }
+      }
+
       &:hover {
-        color: #444;
+        color: #111;
         background-color: rgba(220, 220, 220, 0.3);
         border: 1px solid rgba(220, 220, 220, 0.2);
         cursor: pointer;
