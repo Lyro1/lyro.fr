@@ -34,19 +34,32 @@ jobs:
       - name: NPM build Angular Production
         run: ng build --configuration production --verbose
 
-      - name: Install sshpass
-        run: sudo apt-get install sshpass
+      - name: Set up SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add SSH server's host key to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
 
       - name: Delete Existing Files
-        run : sudo sshpass -p ${{ secrets.SERVER_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} 'rm -rf /var/www/lyro.fr/html/*'
+        run: |
+          ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'sudo chown -R louis /var/www/lyro.fr/html'
+          ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'rm -rf /var/www/lyro.fr/html/*'
 
       - name: Compress and Copy New Files to server
-        run : |
-          cd dist/
-          tar -czvf ../../app.tar.gz ./
+        run: |
+          cd dist/lyro
+          tar -czvf ../app.tar.gz .
           cd ..
-          cd ..
-          sudo sshpass -p ${{ secrets.SERVER_PASSWORD }} scp -v -o StrictHostKeyChecking=no -r app.tar.gz ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:/var/www/lyro.fr/html
+          scp -o StrictHostKeyChecking=no -P ${{ secrets.SSH_PORT }} app.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/lyro.fr/html
 
       - name: Uncompress new Files
-        run : sudo sshpass -p ${{ secrets.SERVER_PASSWORD }} -v ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} 'cd /var/www/lyro.fr/html && tar -xzvf app.tar.gz && rm app.tar.gz && mv lyro/* . && rm -rRf lyro/'
+        run: ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'cd /var/www/lyro.fr/html && tar -xzvf app.tar.gz --no-overwrite-dir && rm app.tar.gz'
+
+      - name: Give permissions
+        run: |
+          ssh -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'sudo chown -R www-data:www-data /var/www/lyro.fr/html'
