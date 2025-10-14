@@ -113,6 +113,8 @@ section {
   .tile {
     position: relative;
     box-sizing: border-box;
+    text-decoration: none;
+    color: #444;
 
     h3 {
       margin: 0;
@@ -163,6 +165,14 @@ section {
 
           &--soon {
             background-color: rgb(255, 127, 0);
+
+            &:after {
+              display: none;
+            }
+          }
+
+          &--offline {
+            background-color: rgb(166, 0, 0);
 
             &:after {
               display: none;
@@ -390,23 +400,52 @@ section {
       }
     }
 
-    &--drive-league {
-      .building {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    &--shutterflow {
+      .mockup {
         width: 100%;
+        aspect-ratio: 2/1;
+        overflow: hidden;
+        margin-top: -32px;
 
         img {
-          width: 256px;
+          display: block;
+          width: 80%;
+          object-fit: cover;
+          object-position: top center;
           transition: 0.1s ease-in-out;
+          margin: 0 auto;
         }
       }
 
       &:hover {
-        .building {
+        .mockup {
           img {
-            transform: rotate(-5deg) scale(1.08);
+            margin-top: -16px;
+          }
+        }
+      }
+    }
+
+    &--drive-league {
+      .mockup {
+        width: 100%;
+        aspect-ratio: 3/2;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          transition: 0.1s ease-in-out;
+          transform: scale(1.2);
+          margin: 0 auto;
+        }
+      }
+
+      &:hover {
+        .mockup {
+          img {
+            transform: rotate(-5deg) scale(1.2);
           }
         }
       }
@@ -415,24 +454,6 @@ section {
     &--slotmate {
       color: #444;
       text-decoration: none;
-
-      .open {
-        position: absolute;
-        top: -12px;
-        right: -6px;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: 0.1s ease-in-out;
-
-        ion-icon {
-          font-size: 20px;
-          color: #AAA;
-        }
-      }
 
       .mockup {
         width: 100%;
@@ -452,11 +473,6 @@ section {
       }
 
       &:hover {
-        .open {
-          top: -6px;
-          opacity: 1;
-        }
-
         .mockup {
           img {
             margin-top: -12px;
@@ -742,6 +758,33 @@ section {
           &:hover {
             transform: rotate(-2deg) scale(1.2);
           }
+        }
+      }
+    }
+
+    &--open {
+      .open {
+        position: absolute;
+        top: -12px;
+        right: -6px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 0.1s ease-in-out;
+
+        ion-icon {
+          font-size: 20px;
+          color: #AAA;
+        }
+      }
+
+      &:hover {
+        .open {
+          top: -6px;
+          opacity: 1;
         }
       }
     }
