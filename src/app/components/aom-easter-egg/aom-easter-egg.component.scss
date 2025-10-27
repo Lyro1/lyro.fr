@@ -1,0 +1,57 @@
+.aom-easter-egg {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+  border-radius: 50%;
+  transition: transform .12s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+
+  @media only screen and (max-width: 700px) {
+    width: 64px;
+    height: 64px;
+  }
+
+  &:hover { cursor: pointer; transform: scale(1.05) rotate(10deg); }
+  &:active { transform: scale(0.97); }
+  img { width: 24px; height: 24px; display: block; }
+
+  &__container {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+  }
+
+  &__message {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -16px;
+    width: 200px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+    border-radius: 8px;
+    z-index: 100;
+    transition: 0.5s ease-in-out;
+
+    &.display {
+      opacity: 1;
+      pointer-events: auto;
+      right: 0;
+    }
+
+    p {
+      text-align: left;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}

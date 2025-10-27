@@ -1,0 +1,17 @@
+<div class="aom-easter-egg__container">
+  <button
+    class="aom-easter-egg"
+    type="button"
+    aria-label="Say hi to Art of Mondays"
+    (click)="blast($event)"
+  >
+    <img src="assets/kiwi-ios.png" alt="The AOM Kiwi" />
+  </button>
+
+  <div class="aom-easter-egg__message"
+       [class.display]="showMessage"
+  >
+    <p>Can't wait to ear from you guys! 👀 See you next Monday!</p>
+  </div>
+</div>
+
