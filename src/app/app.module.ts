@@ -6,6 +6,7 @@ import {MenuComponent} from './components/menu/menu.component';
 import {CommonModule} from "@angular/common";
 import {AboutMeComponent} from "./components/about-me/about-me.component";
 import {AomEasterEggComponent} from "./components/aom-easter-egg/aom-easter-egg.component";
+import {IonicModule} from "@ionic/angular";
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import {AomEasterEggComponent} from "./components/aom-easter-egg/aom-easter-egg.
     AboutMeComponent,
     MenuComponent,
   ],
-    imports: [
-        CommonModule,
-        BrowserModule,
-        AomEasterEggComponent,
-    ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    AomEasterEggComponent,
+    IonicModule,
+  ],
   providers: [],
   exports: [
     BrowserModule
