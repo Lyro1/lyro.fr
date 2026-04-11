@@ -5,7 +5,6 @@ import {LandingComponent} from './components/landing/landing.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {CommonModule} from "@angular/common";
 import {AboutMeComponent} from "./components/about-me/about-me.component";
-import {AomEasterEggComponent} from "./components/aom-easter-egg/aom-easter-egg.component";
 import {IonicModule} from "@ionic/angular";
 
 @NgModule({
@@ -18,7 +17,6 @@ import {IonicModule} from "@ionic/angular";
   imports: [
     CommonModule,
     BrowserModule,
-    AomEasterEggComponent,
     IonicModule,
   ],
   providers: [],
